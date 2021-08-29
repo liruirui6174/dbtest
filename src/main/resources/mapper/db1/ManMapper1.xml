@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lir.dbtest.mapper.db1.ManMapper1">
+
+    <insert id="insertMan" parameterType="com.lir.dbtest.entity.Man">
+        insert into man (name,age,sex,addr)
+        values (
+                   #{name,jdbcType=VARCHAR},
+                   #{age,jdbcType=INTEGER},
+                   #{sex,jdbcType=TINYINT},
+                   #{addr,jdbcType=VARCHAR}
+               );
+    </insert>
+    <delete id="deleteAll">
+        delete from man
+    </delete>
+</mapper>
